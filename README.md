@@ -2,7 +2,7 @@
 
 ## Neurodesk Copilot 
 
-How to enable the Neurodesk Copilot in Jupyter AI  (
+How to enable the Neurodesk Copilot in Jupyter lab 
 
 ### Step 1: Install Jupyter AI and Jupyter lab
 
