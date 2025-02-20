@@ -1,0 +1,9 @@
+FROM ./neurodesk.gguf 
+
+# System messages and parameters
+PARAMETER temperature 0.5
+PARAMETER stop "<|endoftext|>"
+
+# Define system prompt (if needed)
+SYSTEM "You are an AI code assistant that provides precise and efficient code completion. Your responses should be concise and follow best coding practices."
+  
