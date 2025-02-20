@@ -13,9 +13,9 @@ pip install jupyterlab gitpython
 pip install 'jupyter-ai[all]'
 ```
 
-### Deploying Neurodesk Copilot model with ollama for linux
+### Deploying Neurodesk Copilot model with Ollama for Linux (For Windows and Mac users: download Ollama from https://ollama.com/)
 ```bash
-curl -fsSL https://ollama.com/install.sh | sh
+curl -fsSL https://ollama.com/install.sh | sh 
 git clone https://github.com/jnikhilreddy/jupyter-ai-neurodesk.git
 cd jupyter-ai-neurodesk/
 wget https://huggingface.co/jnikhilreddy/neurodesk-gguf/resolve/main/neurodesk.gguf?download=true -O neurodesk.gguf
