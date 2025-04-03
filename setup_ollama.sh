@@ -13,31 +13,21 @@ fi
 cat <<EOL > Modelfile
 FROM ./neurodesk.gguf
 
-# System messages and parameters
 PARAMETER temperature 0.5
-PARAMETER stop ""
+PARAMETER stop "<|endoftext|>"
 
 EOL
 
 # 4. Download the neurodesk.gguf file if it doesn't exist
-
-
 if [ ! -f "neurodesk.gguf" ]; then
     wget "https://huggingface.co/jnikhilreddy/neurodesk-gguf/resolve/main/neurodesk.gguf?download=true" \
          -O neurodesk.gguf
 fi
 
-# Test if the Modelfile works correctly
-if ollama create neurodesk -f Modelfile; then
-    echo "Modelfile is valid and the model was created successfully."
-else
-    echo "Error: Modelfile is invalid or model creation failed."
-    exit 1
-fi
 
 # 5. Start the Ollama server in the background
 ollama serve &
-sleep 5  # Give the server time to start up
+sleep 20  # Give the server time to start up
 
 ollama create neurodesk -f Modelfile
 
